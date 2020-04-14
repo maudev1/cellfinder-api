@@ -1,0 +1,16 @@
+{
+  "name": "cellfinder-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Mauricio Jr",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "google-spreadsheet": "^3.0.11"
+  },
+  "devDependencies": {
+    "npm": "^6.13.4"
+  }
+}
