@@ -1,16 +1,18 @@
 {
-  "name": "cellfinder-core",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
-  "author": "Mauricio Jr",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "google-spreadsheet": "^3.0.11"
+  "name": "cf-api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
   },
-  "devDependencies": {
-    "npm": "^6.13.4"
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "google-spreadsheet": "^3.0.11",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pug": "2.0.0-beta11"
   }
 }
