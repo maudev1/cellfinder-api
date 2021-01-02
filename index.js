@@ -86,5 +86,7 @@ app.post('/close/task', function (req, res, next) {
     
 })
 
-let server = app.listen(3000);
+//let server = app.listen(3000);
+let porta = process.env.PORT || 8080
+let server = app.listen(porta);
 console.log('Servidor Express iniciado na porta %s', server.address().port);
