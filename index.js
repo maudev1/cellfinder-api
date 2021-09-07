@@ -10,20 +10,21 @@ app.use(bodyParser.raw());
 app.use(cors())
 
 //CORS DISABLE
-//app.use((req, res, next) => {
-//    res.header("Access-Control-Allow-Origin", "*");
-//    res.header("Access-Control-Allow-Header", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-//
-//    if (req.method === 'OPTIONS') {
-//        res.header('Acess-Control-Allow-Methods', 'PUT, POST, PATCH DELETE, GET');
-//        return res.status(200).json({})
-//    }
-//    next();
-//});
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Header", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+
+    if (req.method === 'OPTIONS') {
+        res.header('Acess-Control-Allow-Methods', 'PUT, POST, PATCH DELETE, GET');
+        return res.status(200).json({})
+    }
+    next();
+});
 
 //CONFIG GOOGLE-SPREADSHEET CORS DISABLE
 const { GoogleSpreadsheet } = require('google-spreadsheet');
-const doc = new GoogleSpreadsheet('1f7UznepF4rX43WDiYfUXHnpKqEs5w_fVOuu1IZhEO8M');
+//const doc = new GoogleSpreadsheet('1f7UznepF4rX43WDiYfUXHnpKqEs5w_fVOuu1IZhEO8M');
+const doc = new GoogleSpreadsheet('1ask2fetNrDQONqAimwCet6hNW9qi4cgxk3aePVQLTIs');
 
 //CONTROLLER FUNÇÃO BUSCA
 const accessSheet = async () => {
